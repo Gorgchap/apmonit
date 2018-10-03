@@ -1,0 +1,39 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+{{ super() }}
+<style type="text/css">
+    body { font-size: large; font-weight: bold; }
+</style>
+{% endblock %}
+
+{% block title %}AP Monitoring{% endblock title %}
+{% set status = "" %}
+
+{% block content %}
+    <div class="col-xs-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="label-info">
+                    <th class="text-center">Device's type</th>
+                    <th class="text-center">Device's name</th>
+                    <th class="text-center">Last change</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in aplist %}
+                    {% if item.state %}
+                    {% set status = "label-success" %}
+                    {% else %}
+                    {% set status = "label-danger" %}
+                    {% endif %} 
+                        <tr class="{{ status }}">
+                            <td class="text-center">{{ item.type }}</td>
+                            <td class="text-center">{{ item.name }}</td>
+                            <td class="text-center">{{ item.last_change }}</td>
+                        </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
