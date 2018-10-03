@@ -9,7 +9,7 @@ This code was written for Linux Debian 9.5. Follow next steps to install the app
 5) systemctl status apmonit.service
 6) apt-get install apache2 libapache2-mod-wsgi-py3 
 7) mkdir /var/www/FlaskApp/ /var/www/FlaskApp/FlaskApp/ /var/www/FlaskApp/FlaskApp/static/ /var/www/FlaskApp/FlaskApp/templates/
-8) Put apmonit.wsgi into /var/www/FlaskApp/, __init__.py and requirements.txt into /var/www/FlaskApp/FlaskApp/
+8) Put apmonit.wsgi into /var/www/FlaskApp/, __init__.py and requirements.txt into /var/www/FlaskApp/FlaskApp/, index.html into /var/www/FlaskApp/FlaskApp/templates/
 9) cd /var/www/FlaskApp/FlaskApp/
 10) python3 -m venv venv
 11) source venv/bin/activate
