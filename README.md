@@ -4,19 +4,19 @@ Python Flask application for checking of access points' workability (especially 
 This code was written for Linux Debian 9.5. Follow next steps to install the application properly:
 1) Put apmonit.py into /usr/bin/, apmonit.txt into usr/local/etc/, apmonit.service into /lib/systemd/
 2) systemctl daemon-reload
-   systemctl enable apmonit.service
-   systemctl start apmonit.service
-   systemctl status apmonit.service
-3) apt-get install apache2 libapache2-mod-wsgi-py3
-   mkdir /var/www/FlaskApp/ /var/www/FlaskApp/FlaskApp/ /var/www/FlaskApp/FlaskApp/static/ /var/www/FlaskApp/FlaskApp/templates/
-4) Put apmonit.wsgi into /var/www/FlaskApp/, __init__.py and requirements.txt into /var/www/FlaskApp/FlaskApp/
-   cd /var/www/FlaskApp/FlaskApp/
-   python3 -m venv venv
-   source venv/bin/activate
-   pip install flask flask-bootstrap
-   deactivate
-5) Put FlaskApp.conf into /etc/apache2/sites-enabled/
-6) Add string "127.0.0.1 localhost apmonit" into /etc/hosts
-7) systemctl restart apache2.service
-8) If your host OS is Windows, Add string "{IP-address of Virtual Machine} apmonit" into C:\Windows\System32\drivers\etc\hosts
-9) Enter in address line of your browser: http://apmonit
+3) systemctl enable apmonit.service
+4) systemctl start apmonit.service
+5) systemctl status apmonit.service
+6) apt-get install apache2 libapache2-mod-wsgi-py3 
+7) mkdir /var/www/FlaskApp/ /var/www/FlaskApp/FlaskApp/ /var/www/FlaskApp/FlaskApp/static/ /var/www/FlaskApp/FlaskApp/templates/
+8) Put apmonit.wsgi into /var/www/FlaskApp/, __init__.py and requirements.txt into /var/www/FlaskApp/FlaskApp/
+9) cd /var/www/FlaskApp/FlaskApp/
+10) python3 -m venv venv
+11) source venv/bin/activate
+12) pip install -y flask flask-bootstrap
+13) deactivate
+14) Put FlaskApp.conf into /etc/apache2/sites-enabled/
+15) Add string "127.0.0.1 localhost apmonit" into /etc/hosts
+16) systemctl restart apache2.service
+17) If your host OS is Windows, add string "{IP-address of Virtual Machine} apmonit" into C:\Windows\System32\drivers\etc\hosts
+18) Enter in address line of your browser: http://apmonit
