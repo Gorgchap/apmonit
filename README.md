@@ -1,6 +1,4 @@
 # apmonit
-Python Flask application for checking of access points' workability (especially for CSF VSU)
-
 This code was written for Linux Debian 9.5. Follow next steps to install the application properly:
 1) Put apmonit.py into /usr/bin/, apmonit.txt into usr/local/etc/, apmonit.service into /lib/systemd/system/
 2) systemctl daemon-reload
