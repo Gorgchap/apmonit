@@ -22,3 +22,5 @@ This code was written for Linux Debian 9.5. Follow next steps to install the app
 20) systemctl restart apache2.service
 21) If your host OS is Windows, add string "{IP-address of Virtual Machine} apmonit" into C:\Windows\System32\drivers\etc\hosts
 22) Enter in address line of your browser: http://apmonit
+
+P.S. Bash script apmonit.sh was created specially for Linux Debian 7 (wheezy)
