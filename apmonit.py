@@ -23,6 +23,7 @@ class AccessPoint:
         self.state = state
     
     def connect(self):
+        global counter
         if self.port:
             sock = s.socket(s.AF_INET, s.SOCK_STREAM, s.IPPROTO_TCP)
             sock.settimeout(self.timeout)
